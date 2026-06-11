@@ -1,0 +1,14 @@
+services:
+  backend:
+    container_name: backend
+    build: 
+      context: .
+      dockerfile: ./dockerfiles/dev/django/Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./core:/usr/src/app
+    environment:
+      DEBUG: "True"
+    ports:
+      - 8000:8000
+    restart: always

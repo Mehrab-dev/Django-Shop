@@ -1,0 +1,5 @@
+# main modules
+django==5.2
+
+# security and config
+python-decouple
